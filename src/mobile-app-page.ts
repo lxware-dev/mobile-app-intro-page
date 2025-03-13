@@ -68,7 +68,7 @@ export class MobileAppPage extends LitElement {
         text-align: center;
         padding: 3rem 1rem;
         background-color: #f5f7fa;
-        background-image: url("/themes/theme-lingxia/assets/img/squares-bg.webp");
+        background-image: url(data:image/webp;base64,UklGRkwBAABXRUJQVlA4TEABAAAvP0uAAQ9w+//L/ytI24Dxb7ndmf/4Adg2kqRow3jv8s/wvPUe7p6pIvqvxm3biJ7c6e4j4gZKzQYpO2XYl6mtxVr2gP/4j//4j//4j//4j//4j//4j//4j//4j//4j//4j//4j//471spb+eMlH35Iw5oahH8x3/8x3/8x3/8x3/8x3/8x3/8x3/8x3/8x3/8x3/8x3/8x3/vZ3k7p205c1OL4D/+4z/+4z/+4z/+4z/+4z/+4z/+4z/+4z/+4z/+4z/+4z/+ez/L2znneZj/+I//+I//+I//+I//+I//+I//+I//+I//+I//+I//+I//+O/9LG/nHFmpLZQtDfMf//Ef//Ef//Ef//Ef//Ef//Ef//Ef//Ef//Ef//Ef//Ef/72f5e2ctuXMTS2C//iP//iP//iP//iP//iP/+QhAA==);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="zh-CN" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s5e8250fb85d64c23">
+  <source>Close</source>
+  <target>关闭</target>
+</trans-unit>
+<trans-unit id="s29bcbfa9d16e4bc0">
+  <source>App Preview</source>
+  <target>应用预览</target>
+</trans-unit>
+<trans-unit id="sd60397cf6fdb7697">
+  <source>Scan to Download</source>
+  <target>扫码下载</target>
+</trans-unit>
+<trans-unit id="sac8ba291078b3f8b">
+  <source>Scan the QR code with your phone to download the app</source>
+  <target>使用手机扫描二维码下载应用</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

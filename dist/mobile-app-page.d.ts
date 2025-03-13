@@ -14,17 +14,13 @@ interface Download {
 }
 export declare class MobileAppPage extends LitElement {
     config: string;
+    language: string;
     configObject: Config;
     constructor();
     attributeChangedCallback(name: string, oldValue: string, newValue: string): void;
     static styles: import('lit').CSSResult[];
     qrModalVisible: boolean;
-    currentQR: {
-        title: string;
-        url: string;
-        description: string;
-        dataUrl: string;
-    };
+    currentQR: string;
     showQRCode(download: Download): Promise<void>;
     closeQRModal(): void;
     handleModalClick(event: MouseEvent): void;

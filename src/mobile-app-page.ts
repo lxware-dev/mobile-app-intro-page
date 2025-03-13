@@ -1,10 +1,13 @@
 // @ts-ignore
+import { configureLocalization, LocaleModule, msg } from "@lit/localize";
 import resetStyles from "@unocss/reset/tailwind.css?inline";
 import { css, html, LitElement, unsafeCSS } from "lit";
 import { property, state } from "lit/decorators.js";
 import QRCode from "qrcode";
 // Import Swiper and register the custom element
 import { register } from "swiper/element/bundle";
+import { sourceLocale, targetLocales } from "./generated/locale-codes";
+import * as templates_zh_CN from "./generated/locales/zh-CN";
 
 // Register Swiper custom elements
 register();
@@ -24,11 +27,22 @@ interface Download {
   color: string;
 }
 
+const localizedTemplates = new Map([["zh-CN", templates_zh_CN]]);
+
+const { setLocale } = configureLocalization({
+  sourceLocale,
+  targetLocales,
+  loadLocale: async (locale) => localizedTemplates.get(locale) as LocaleModule,
+});
+
 export class MobileAppPage extends LitElement {
   // config
 
   @property({ type: String, attribute: "config", reflect: true })
   config: string = "{}";
+
+  @property({ type: String, attribute: "language" })
+  language: string = "en";
 
   @state()
   configObject: Config;
@@ -40,6 +54,10 @@ export class MobileAppPage extends LitElement {
 
   attributeChangedCallback(name: string, oldValue: string, newValue: string) {
     super.attributeChangedCallback(name, oldValue, newValue);
+
+    if (name === "language" && oldValue !== newValue) {
+      setLocale(newValue);
+    }
 
     if (name === "config" && oldValue !== newValue) {
       try {
@@ -114,21 +132,9 @@ export class MobileAppPage extends LitElement {
   qrModalVisible = false;
 
   @state()
-  currentQR = {
-    title: "",
-    url: "",
-    description: "",
-    dataUrl: "",
-  };
+  currentQR = "";
 
   async showQRCode(download: Download) {
-    this.currentQR = {
-      title: `扫码下载`,
-      url: download.url,
-      description: `使用手机扫描二维码`,
-      dataUrl: "",
-    };
-
     const dataUrl = await QRCode.toDataURL(download.url, {
       width: 200,
       margin: 1,
@@ -138,10 +144,7 @@ export class MobileAppPage extends LitElement {
       },
     });
 
-    this.currentQR = {
-      ...this.currentQR,
-      dataUrl,
-    };
+    this.currentQR = dataUrl;
 
     this.qrModalVisible = true;
     this.requestUpdate();
@@ -201,11 +204,16 @@ export class MobileAppPage extends LitElement {
       <div class="overflow-x-hidden bg-gray-50 text-gray-800">
         <div class="w-full">
           <div class="top-content">
-            <img src="${this.configObject.logo}" class="mb-6 size-24 shadow-md rounded-lg" />
+            <img
+              src="${this.configObject.logo}"
+              class="mb-6 size-24 shadow-md rounded-lg"
+            />
             <h1 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
               ${this.configObject.name} <span class="text-blue-600">App</span>
             </h1>
-            <p class="mb-6 text-lg text-gray-600">${this.configObject.description}</p>
+            <p class="mb-6 text-lg text-gray-600">
+              ${this.configObject.description}
+            </p>
 
             <div class="mt-4 flex flex-wrap justify-center gap-4">
               ${this.configObject.downloads?.map(
@@ -234,14 +242,20 @@ export class MobileAppPage extends LitElement {
           </div>
 
           <div class="container mx-auto px-4 py-16">
-            <h2 class="mb-8 text-center text-2xl font-bold text-gray-800">应用预览</h2>
+            <h2 class="mb-8 text-center text-2xl font-bold text-gray-800">
+              ${msg("App Preview")}
+            </h2>
 
             <div class="max-w-100% lg:max-w-70% mx-auto">
               <swiper-container init="false" pagination="true">
                 ${this.configObject.screenshots?.map(
                   (screenshot) => html`
                     <swiper-slide>
-                      <img src="${screenshot}" class="app-screenshot" alt="App Screenshot" />
+                      <img
+                        src="${screenshot}"
+                        class="app-screenshot"
+                        alt="App Screenshot"
+                      />
                     </swiper-slide>
                   `
                 )}
@@ -261,22 +275,34 @@ export class MobileAppPage extends LitElement {
           <div
             class="max-w-90% relative flex w-80 transform flex-col items-center rounded-xl bg-white px-6 py-8 shadow-xl transition-transform duration-300"
           >
-            <h3 class="mb-4 text-center text-xl font-bold text-gray-800">${this.currentQR.title}</h3>
-            <div class="h-50 w-50 mx-auto mb-4 flex items-center justify-center rounded-lg bg-gray-50 p-2">
-              ${this.currentQR.dataUrl
-                ? html`<img src="${this.currentQR.dataUrl}" alt="下载二维码" class="h-full w-full" />`
+            <h3 class="mb-4 text-center text-xl font-bold text-gray-800">
+              ${msg("Scan to Download")}
+            </h3>
+            <div
+              class="h-50 w-50 mx-auto mb-4 flex items-center justify-center rounded-lg bg-gray-50 p-2"
+            >
+              ${this.currentQR
+                ? html`<img src="${this.currentQR}" class="h-full w-full" />`
                 : html`<div class="flex items-center justify-center">
-                    <div class="i-tabler-loader animate-spin text-2xl text-gray-400"></div>
+                    <div
+                      class="i-tabler-loader animate-spin text-2xl text-gray-400"
+                    ></div>
                   </div>`}
             </div>
-            <p class="mb-6 text-center text-sm text-gray-600">${this.currentQR.description}</p>
+            <p class="mb-6 text-center text-sm text-gray-600">
+              ${msg("Scan the QR code with your phone to download the app")}
+            </p>
 
             <button
               class="group mt-2 flex items-center justify-center gap-2 rounded-lg bg-gray-100 px-5 py-2 text-gray-700 transition-colors hover:bg-gray-200"
               @click=${this.closeQRModal}
             >
-              <div class="i-tabler-x text-sm text-gray-600 group-hover:text-gray-800"></div>
-              <span class="text-sm text-gray-600 group-hover:text-gray-800">关闭</span>
+              <div
+                class="i-tabler-x text-sm text-gray-600 group-hover:text-gray-800"
+              ></div>
+              <span class="text-sm text-gray-600 group-hover:text-gray-800"
+                >${msg("Close")}</span
+              >
             </button>
           </div>
         </div>

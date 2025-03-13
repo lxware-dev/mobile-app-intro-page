@@ -62,7 +62,7 @@ Minimum version required to store current data is: `+P+`.
       <div class="overflow-x-hidden bg-gray-50 text-gray-800">
         <div class="w-full">
           <div class="top-content">
-            <img src="${this.configObject.logo}" class="mb-6 size-24" />
+            <img src="${this.configObject.logo}" class="mb-6 size-24 shadow-md rounded-lg" />
             <h1 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
               ${this.configObject.name} <span class="text-blue-600">App</span>
             </h1>
@@ -275,6 +275,7 @@ Minimum version required to store current data is: `+P+`.
 .font-bold{font-weight:700;}
 .font-semibold{font-weight:600;}
 .hover\\:opacity-80:hover{opacity:0.8;}
+.shadow-md{--un-shadow:var(--un-shadow-inset) 0 4px 6px -1px var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 2px 4px -2px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .shadow-sm{--un-shadow:var(--un-shadow-inset) 0 1px 2px 0 var(--un-shadow-color, rgb(0 0 0 / 0.05));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .shadow-xl{--un-shadow:var(--un-shadow-inset) 0 20px 25px -5px var(--un-shadow-color, rgb(0 0 0 / 0.1)),var(--un-shadow-inset) 0 8px 10px -6px var(--un-shadow-color, rgb(0 0 0 / 0.1));box-shadow:var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);}
 .backdrop-blur-sm{--un-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--un-backdrop-blur) var(--un-backdrop-brightness) var(--un-backdrop-contrast) var(--un-backdrop-grayscale) var(--un-backdrop-hue-rotate) var(--un-backdrop-invert) var(--un-backdrop-opacity) var(--un-backdrop-saturate) var(--un-backdrop-sepia);backdrop-filter:var(--un-backdrop-blur) var(--un-backdrop-brightness) var(--un-backdrop-contrast) var(--un-backdrop-grayscale) var(--un-backdrop-hue-rotate) var(--un-backdrop-invert) var(--un-backdrop-opacity) var(--un-backdrop-saturate) var(--un-backdrop-sepia);}

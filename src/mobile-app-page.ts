@@ -201,7 +201,7 @@ export class MobileAppPage extends LitElement {
       <div class="overflow-x-hidden bg-gray-50 text-gray-800">
         <div class="w-full">
           <div class="top-content">
-            <img src="${this.configObject.logo}" class="mb-6 size-24" />
+            <img src="${this.configObject.logo}" class="mb-6 size-24 shadow-md rounded-lg" />
             <h1 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
               ${this.configObject.name} <span class="text-blue-600">App</span>
             </h1>

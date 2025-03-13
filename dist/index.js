@@ -7773,7 +7773,7 @@ const ci = class ci extends Ge {
 
         <div
           id="qrModal"
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-all duration-300"
+          class="fixed inset-0 z-999999 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-all duration-300"
           style="${this.qrModalVisible ? "opacity: 1; visibility: visible;" : "opacity: 0; visibility: hidden; pointer-events: none;"}"
           @click=${this.handleModalClick}
         >
@@ -7885,7 +7885,7 @@ ci.styles = [
 .relative{position:relative;}
 .static{position:static;}
 .inset-0{inset:0;}
-.z-50{z-index:50;}
+.z-999999{z-index:999999;}
 .mx-auto{margin-left:auto;margin-right:auto;}
 .mb-4{margin-bottom:1rem;}
 .mb-6{margin-bottom:1.5rem;}

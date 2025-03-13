@@ -252,7 +252,7 @@ export class MobileAppPage extends LitElement {
 
         <div
           id="qrModal"
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-all duration-300"
+          class="fixed inset-0 z-999999 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-all duration-300"
           style="${this.qrModalVisible
             ? "opacity: 1; visibility: visible;"
             : "opacity: 0; visibility: hidden; pointer-events: none;"}"

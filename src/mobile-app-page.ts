@@ -47,6 +47,9 @@ export class MobileAppPage extends LitElement {
   @state()
   configObject: Config;
 
+  @state()
+  private viewerInstance: Viewer | null = null;
+
   constructor() {
     super();
     this.configObject = JSON.parse(this.config) as Config;
@@ -197,10 +200,19 @@ export class MobileAppPage extends LitElement {
       swiperEl.initialize();
     }
 
+    this.initializeViewer();
+  }
+
+  private initializeViewer() {
+    if (this.viewerInstance) {
+      return;
+    }
+
     const gallery = this.shadowRoot?.getElementById("screenshot-gallery");
     const root = this.shadowRoot as unknown as HTMLElement;
-    if (gallery) {
-      new Viewer(gallery as HTMLElement, {
+
+    if (gallery && gallery.querySelector("img")) {
+      this.viewerInstance = new Viewer(gallery as HTMLElement, {
         container: root,
         navbar: true,
         toolbar: {
@@ -220,6 +232,8 @@ export class MobileAppPage extends LitElement {
         transition: true,
         zIndex: 999999,
       });
+    } else {
+      setTimeout(() => this.initializeViewer(), 100);
     }
   }
 

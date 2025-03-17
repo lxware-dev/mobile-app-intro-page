@@ -246,7 +246,7 @@ export class MobileAppPage extends LitElement {
               ${msg("App Preview")}
             </h2>
 
-            <div class="max-w-100% lg:max-w-70% mx-auto">
+            <div class="max-w-100% lg:max-w-80% mx-auto">
               <swiper-container init="false" pagination="true">
                 ${this.configObject.screenshots?.map(
                   (screenshot) => html`

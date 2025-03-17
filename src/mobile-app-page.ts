@@ -6,7 +6,7 @@ import { property, state } from "lit/decorators.js";
 import QRCode from "qrcode";
 import { register } from "swiper/element/bundle";
 import Viewer from "viewerjs";
-import "viewerjs/dist/viewer.css";
+import viewerStyles from "viewerjs/dist/viewer.css?inline";
 import { sourceLocale, targetLocales } from "./generated/locale-codes";
 import * as templates_zh_CN from "./generated/locales/zh-CN";
 
@@ -71,6 +71,7 @@ export class MobileAppPage extends LitElement {
 
   static override styles = [
     unsafeCSS(resetStyles),
+    unsafeCSS(viewerStyles),
     css`
       :host {
         overflow-x: hidden;
@@ -197,8 +198,10 @@ export class MobileAppPage extends LitElement {
     }
 
     const gallery = this.shadowRoot?.getElementById("screenshot-gallery");
+    const root = this.shadowRoot as unknown as HTMLElement;
     if (gallery) {
       new Viewer(gallery as HTMLElement, {
+        container: root,
         navbar: true,
         toolbar: {
           zoomIn: true,

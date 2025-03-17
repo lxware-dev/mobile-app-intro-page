@@ -4,12 +4,12 @@ import resetStyles from "@unocss/reset/tailwind.css?inline";
 import { css, html, LitElement, unsafeCSS } from "lit";
 import { property, state } from "lit/decorators.js";
 import QRCode from "qrcode";
-// Import Swiper and register the custom element
 import { register } from "swiper/element/bundle";
+import Viewer from "viewerjs";
+import "viewerjs/dist/viewer.css";
 import { sourceLocale, targetLocales } from "./generated/locale-codes";
 import * as templates_zh_CN from "./generated/locales/zh-CN";
 
-// Register Swiper custom elements
 register();
 
 interface Config {
@@ -163,10 +163,8 @@ export class MobileAppPage extends LitElement {
   }
 
   firstUpdated() {
-    // Initialize Swiper after the component is first rendered
     const swiperEl = this.shadowRoot?.querySelector("swiper-container");
     if (swiperEl) {
-      // Set up Swiper parameters
       Object.assign(swiperEl, {
         slidesPerView: 2.5,
         spaceBetween: 20,
@@ -196,6 +194,29 @@ export class MobileAppPage extends LitElement {
 
       // Initialize Swiper
       swiperEl.initialize();
+    }
+
+    const gallery = this.shadowRoot?.getElementById("screenshot-gallery");
+    if (gallery) {
+      new Viewer(gallery as HTMLElement, {
+        navbar: true,
+        toolbar: {
+          zoomIn: true,
+          zoomOut: true,
+          oneToOne: false,
+          reset: true,
+          prev: true,
+          next: true,
+          play: false,
+          rotateLeft: false,
+          rotateRight: false,
+          flipHorizontal: false,
+          flipVertical: false,
+        },
+        title: false,
+        transition: true,
+        zIndex: 999999,
+      });
     }
   }
 
@@ -246,14 +267,17 @@ export class MobileAppPage extends LitElement {
               ${msg("App Preview")}
             </h2>
 
-            <div class="max-w-100% lg:max-w-80% mx-auto">
+            <div
+              class="max-w-100% lg:max-w-80% mx-auto"
+              id="screenshot-gallery"
+            >
               <swiper-container init="false" pagination="true">
                 ${this.configObject.screenshots?.map(
                   (screenshot) => html`
                     <swiper-slide>
                       <img
                         src="${screenshot}"
-                        class="app-screenshot"
+                        class="app-screenshot cursor-pointer"
                         alt="App Screenshot"
                       />
                     </swiper-slide>

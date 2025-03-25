@@ -253,7 +253,7 @@ export class MobileAppPage extends LitElement {
               ${this.configObject.description}
             </p>
 
-            <div class="mt-4 flex flex-wrap justify-center gap-4">
+            <div class="mt-4 flex flex-wrap justify-center gap-4 max-w-56rem">
               ${this.configObject.downloads?.map(
                 (download) => html`
                   <a

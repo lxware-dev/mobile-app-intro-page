@@ -8,6 +8,81 @@
     <script type="module" src="/src/mobile-app-page.ts"></script>
   </head>
   <body>
-    <mobile-app-page language="zh-CN" config="{&quot;name&quot;:&quot;1Panel&quot;,&quot;description&quot;:&quot;随时随地管理你的服务器&quot;,&quot;logo&quot;:&quot;https://www.lxware.cn/upload/1panel-logo-white.png&quot;,&quot;screenshots&quot;:[&quot;https://www.lxware.cn/upload/1panel-app-servers.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-monitoring.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-docker.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-apps.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-waf.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-website-monitoring.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-file.png&quot;,&quot;https://www.lxware.cn/upload/1panel-app-ssh.png&quot;],&quot;downloads&quot;:[{&quot;name&quot;:&quot;App Store&quot;,&quot;url&quot;:&quot;https://apps.apple.com/cn/app/1panel/id6742480037&quot;,&quot;color&quot;:&quot;#1873E6&quot;,&quot;icon&quot;:&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAArFJREFUeF7tW+F6wyAIjE+29cm2PlnbJ3Ohn+ZzrsphsIV0+Z0QOe4IoAmLgyvG+Lksy1deagjhpLXsoGVohp3CcQIgX9fDA9Bw/D0ASM5fOow6hxC+tRhnSgIxRnJs03rDyWMCAET+jkdYw68V/bs9TWN7bMUYifZlsntkTjX6ZgAAqa8efUsARIA96tE3AcAro+8JgFMI4QqwRHzLy5NgXCnArHqa81YY0AKAIk66nxL5ra8Qc0b5gQcMeIrjlgDIZe9trQOo0Zka8Tp+6jkgVXTbe/Y6VNmru8LdYO0GoOrVW5UcLfSGNjGgzTKYwzXCMABMy9rLFOdU0//p6HbYzO8TAzEEAFq8APmypDDXBwDmtltgIMQAgE2LZLGz7oVAEAHgyHlYEjAAirSfFfGW3W4lCQHg2HlWBiwAjp2HeoijAgA5zzZD6Jzu2aJm3sfSvny+ywCH9Bc5jzCA69VNBX9kYtxkgEP6i6PfZYBD+sOJD8oB3gAYoT/HAE/6H94x7uUATwAM6f9IDPgHAJ02wTNBYF5vqQZ4+xwwBQBku9oMC2Z8Bl0BsE6d1QshbwAMyaBXByDndcxIIC1EzIIjNUOEgZgF3DzAUzUIT4KhZohucjgGz77BUuAY4C0RivcLOQBou6p3atNaEqzXw/YIyFTYMwvYvPAuADTPGCIAeJcBsaApBRYA51+DuwR6fQIKgGcWdBMhBIBzFqgB4JEF+z+D5YfVYWXIVoSwBJIMPLGAjT67N/iozPOyYYJOiEQMyIA4kAIU/SEGOJAC7PwwAAkEixMj3YEI1+oZzAds1oc3Rjjni3xghQli53dJoKoPRkDIx2TpmHx5fQC/z9XxGXJeDQBBToB+hkinU379Md5gpFjz6hKoDaa8kKOYo5xPiIvP9yd79BqymS+1nyt+APW2WFB3CYBrAAAAAElFTkSuQmCC&quot;},{&quot;name&quot;:&quot;Google Play&quot;,&quot;url&quot;:&quot;https://play.google.com/store/apps/details?id=cn.lxware.onepanel&quot;,&quot;color&quot;:&quot;#01875F&quot;,&quot;icon&quot;:&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAApBJREFUeF7lm22WwiAMRcvKRlc248pGV8YMHntOxQBJeAmg/pXW3ttH+GgNW+UTY/zdtu2WmoQQfmptV/0utC78IeH07+Cybds1hHBtHbPS908CYownCvAgIbFd3ikNuYB7zCnATMLbiMgFpD5/jztTwvIiSgKKYEQS7m1XLZQ1AVIJS6ahJUAjYSkRHAFaCUuI4ArokZDmDbdZh06JgB4J06ZBKqBXwnQiNAIQEqYRoRWAkjBcRI8AqIRRC61eAUgJQ9KAEICW4CoCJcBCgosIpAAzCZYLLbSAmoS01/CdGig/JhsxFgIsJaRzn5HbclYCrCSkPcmzMkHkYZYC0BJI+NI+JleStQCUhBL8XlfU9cFDQK+EFvzxZotFeAnQSpDAq0R4CpBK0MKLRHgLSBfHAeO04da5arcYIaAl4Ysa6mKMJhOpUQKKEqjbCoDfT/uShpECWBKA8LuEp5nkaAFVCQbwL7/3iQKeusFoAc25vUEKphHQhN87LVDCNEWwNs6//TDImeRw2nAnQunRXLrz5Ks93jVAAiZpS8mogu8HeArQAGmOEe0aeQnQgrSmzfke45TL4R74Pamtc7DiTvUT6wS0LpxbyGpJIF/t457YUgASvpoELqxnAizgiyu62QRYwav7eU0QugtYwJuAW8wD0PCm4GgBaHjxeK6tA4gugIRnrxC1wPlxvQJQ8C5xRw+DCPhh4L01AAHv1s/Rw2Av/BTg2gT0wA+Pe28N0MJPCS5NgBYe+joLaug7noczDGrgp+rnPUWw9Oep0oPKqeMurQES+OXAWzWAC78seE0A+fcW4unMMv2cXQNKDTN49wWLRfUnE0D90AF++bg3i2DeIL2E+Hi/t/hoyfLueJz7D96uuF+/BdYIAAAAAElFTkSuQmCC&quot;},{&quot;name&quot;:&quot;APK&quot;,&quot;url&quot;:&quot;https://apk.1panel.cn&quot;,&quot;color&quot;:&quot;#2E7D32&quot;,&quot;icon&quot;:&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAApxJREFUeF7tmgtuxCAMRMPJ2j1ZuydrejK6jkJEWAMefgmFlSpVaoLtN2N+XbUM/lGD179MANMBgxOYLTC4AeYkOFtgtsDgBGYLDG4AbBXQWn8uy0I/i1Lq+07wUnMTt4DW+scUvxf+vAsErTWJ8WUJsiqlHhKBRACYAGbsh1JqlQSq9UxubrkAxKQvACByqBQA9T21APcRBaoBIKA+hRPlJQJAozFzgF3TJa2gXwQ8YMXORACEXCAOWMoJJdTfVjMkoUjQpi4IqC+yvqkbArC3QrbtEOjcsyEh1GttRsaHHt4BhFqBdYG1Sfmwkts2VPbavf/+e6jDbLZKWT/ZAbEJkRRwCnYLRQSiZ2mfQVBonlkD1qfdKSwo/ILABWiBpZ6Hej/LATEXlKoIGCepeHgVsBPabe7bHAG5F3k0eQXKaQE6fOT2d5Hq9/lBdPhxA8IAIrNwqYJSx4FbAQJw8+INNAiCGEDkLJCqWK33xBBEADor3kAVnU+iADotXgwhCKCTno+1UbAdvAD+SfEGjnefwAJI2OSYe8FW+4KUeCwEHwDfkde1GyVCFtsSauSak6WBOYqdFN8AIEVwpy8goVjvsn/PjPk2H3AApOqzk0tlAKyKSMu6AE8AEPV9t66h83qS5M5LHgeELmncsCfhXABS9beLCve/LyDAVB5vzkPj2hAPAOgge/ZHMonvZ0NA7G8FO/K2ASDq24nTCtBq+eNWoaTYxgUbgMbqpape+r1tXzAygG0OMwBS7V9alabjURuYK+y73O01BfC6bn8QAPfLBa2TuDLec3QAKwFwv/pypSKtYx8AWge+TbzoldhtMq2UyARQCWw3w04HdCNVpUSnAyqB7WbY6YBupKqU6HRAJbDdDDsd0I1UlRL9A+xJND7MXxGMAAAAAElFTkSuQmCC&quot;}]}"> </mobile-app-page>
+    <mobile-app-page language="zh-CN" config="{}"></mobile-app-page>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dom = document.querySelector("mobile-app-page");
+        console.log(dom);
+        const config = {
+          description: "随时随地管理你的服务器",
+          downloads: [
+            {
+              color: "#1873E6",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAArFJREFUeF7tW+F6wyAIjE+29cm2PlnbJ3Ohn+ZzrsphsIV0+Z0QOe4IoAmLgyvG+Lksy1deagjhpLXsoGVohp3CcQIgX9fDA9Bw/D0ASM5fOow6hxC+tRhnSgIxRnJs03rDyWMCAET+jkdYw68V/bs9TWN7bMUYifZlsntkTjX6ZgAAqa8efUsARIA96tE3AcAro+8JgFMI4QqwRHzLy5NgXCnArHqa81YY0AKAIk66nxL5ra8Qc0b5gQcMeIrjlgDIZe9trQOo0Zka8Tp+6jkgVXTbe/Y6VNmru8LdYO0GoOrVW5UcLfSGNjGgzTKYwzXCMABMy9rLFOdU0//p6HbYzO8TAzEEAFq8APmypDDXBwDmtltgIMQAgE2LZLGz7oVAEAHgyHlYEjAAirSfFfGW3W4lCQHg2HlWBiwAjp2HeoijAgA5zzZD6Jzu2aJm3sfSvny+ywCH9Bc5jzCA69VNBX9kYtxkgEP6i6PfZYBD+sOJD8oB3gAYoT/HAE/6H94x7uUATwAM6f9IDPgHAJ02wTNBYF5vqQZ4+xwwBQBku9oMC2Z8Bl0BsE6d1QshbwAMyaBXByDndcxIIC1EzIIjNUOEgZgF3DzAUzUIT4KhZohucjgGz77BUuAY4C0RivcLOQBou6p3atNaEqzXw/YIyFTYMwvYvPAuADTPGCIAeJcBsaApBRYA51+DuwR6fQIKgGcWdBMhBIBzFqgB4JEF+z+D5YfVYWXIVoSwBJIMPLGAjT67N/iozPOyYYJOiEQMyIA4kAIU/SEGOJAC7PwwAAkEixMj3YEI1+oZzAds1oc3Rjjni3xghQli53dJoKoPRkDIx2TpmHx5fQC/z9XxGXJeDQBBToB+hkinU379Md5gpFjz6hKoDaa8kKOYo5xPiIvP9yd79BqymS+1nyt+APW2WFB3CYBrAAAAAElFTkSuQmCC",
+              name: "App Store",
+              url: "https://apps.apple.com/cn/app/1panel/id6742480037",
+            },
+            {
+              color: "#01875F",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAApBJREFUeF7lm22WwiAMRcvKRlc248pGV8YMHntOxQBJeAmg/pXW3ttH+GgNW+UTY/zdtu2WmoQQfmptV/0utC78IeH07+Cybds1hHBtHbPS908CYownCvAgIbFd3ikNuYB7zCnATMLbiMgFpD5/jztTwvIiSgKKYEQS7m1XLZQ1AVIJS6ahJUAjYSkRHAFaCUuI4ArokZDmDbdZh06JgB4J06ZBKqBXwnQiNAIQEqYRoRWAkjBcRI8AqIRRC61eAUgJQ9KAEICW4CoCJcBCgosIpAAzCZYLLbSAmoS01/CdGig/JhsxFgIsJaRzn5HbclYCrCSkPcmzMkHkYZYC0BJI+NI+JleStQCUhBL8XlfU9cFDQK+EFvzxZotFeAnQSpDAq0R4CpBK0MKLRHgLSBfHAeO04da5arcYIaAl4Ysa6mKMJhOpUQKKEqjbCoDfT/uShpECWBKA8LuEp5nkaAFVCQbwL7/3iQKeusFoAc25vUEKphHQhN87LVDCNEWwNs6//TDImeRw2nAnQunRXLrz5Ks93jVAAiZpS8mogu8HeArQAGmOEe0aeQnQgrSmzfke45TL4R74Pamtc7DiTvUT6wS0LpxbyGpJIF/t457YUgASvpoELqxnAizgiyu62QRYwav7eU0QugtYwJuAW8wD0PCm4GgBaHjxeK6tA4gugIRnrxC1wPlxvQJQ8C5xRw+DCPhh4L01AAHv1s/Rw2Av/BTg2gT0wA+Pe28N0MJPCS5NgBYe+joLaug7noczDGrgp+rnPUWw9Oep0oPKqeMurQES+OXAWzWAC78seE0A+fcW4unMMv2cXQNKDTN49wWLRfUnE0D90AF++bg3i2DeIL2E+Hi/t/hoyfLueJz7D96uuF+/BdYIAAAAAElFTkSuQmCC",
+              name: "Google Play",
+              url: "https://play.google.com/store/apps/details?id=cn.lxware.onepanel",
+            },
+            {
+              color: "#FF6900",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAArNJREFUeF7tm+t2wyAIgOuTbX2yrU+27MlcsZpDDChY23nrn+0k3vgEVCTmUvFnrf30zcHfj6jp8E7a44YK/qL/N2MMfidtjyxnnqntBf5CQj/TXEndG1QyxnyXVHZ1tRWR0NoZ1XalLV8EQwygYcFjUABCbCYiANZaULGg6tqZ+a/yN4lpZAFYa3/uRFtTdylU0IRrqjALwKs8CD/C78qtHCkAdgTJgwzmbg+UPOTDztWemzfSHE4AOnV4UmU9QTgAGFz4AOngD2IAPXv8Ii3YAUwy+yctmBXA7gswgKGWvZw9hGXRAZhM/Q9mMDMAZwYBwFTq71VgegAQSDGm8NBTLSRVeNLk+teeWq8AQHvWzx4xcx6Yeu/HAa+ycQfuYGPvjSj7bgcAHnhuUioCuDWjAfHMpSBUBLABAO3+/yUmwJgFObZmAaB7gaQpSuP6nBY0CaBwNUmGsrk2awPQek7SBAoBkGf0yCGexlcRwAV8QAsAWL9C+agRAcCkk5Hb3gG4WxrCI8KOLd7wjAmAup1h/MUCQC2P3ZvA0gDi7n6ZwCOTJL53XD5g+QAi92c5QeK0WnsnWOU4zDg2MkujISdYLx6wANCefWlA4xuhejHBTk3AAaA2JamQliYg0roJFAEAOJqLCe44TEGWltX0n5rMqe8GH1dj/npcGxZTXsC0WRwD0G6G2pRINyrnn4IGaB2hrqs2S88N4JAi4/3ATGawL884SWomMzgDmEgLDhu5OFN0Bi047E6pZOmRfcFpa77S5ZnEhBFNgYw6r09mUpu0jj6V48SAUyPYPZvWl/1qrONcYlEukwgAggDfA2uTEd99EsjOOh6QGECopElofLPkKsHD2NQAiIRGeJTN7nwRDCc0tC3NPIvH8RSAuDHvNLGJ4E/otaYTOy74hN49KxWWmoQ/tlK5/qQEMNEAAAAASUVORK5CYII=",
+              name: "小米",
+              url: "http://app.xiaomi.com/detail/1638797",
+            },
+
+            {
+              color: "#FF6900",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAArNJREFUeF7tm+t2wyAIgOuTbX2yrU+27MlcsZpDDChY23nrn+0k3vgEVCTmUvFnrf30zcHfj6jp8E7a44YK/qL/N2MMfidtjyxnnqntBf5CQj/TXEndG1QyxnyXVHZ1tRWR0NoZ1XalLV8EQwygYcFjUABCbCYiANZaULGg6tqZ+a/yN4lpZAFYa3/uRFtTdylU0IRrqjALwKs8CD/C78qtHCkAdgTJgwzmbg+UPOTDztWemzfSHE4AOnV4UmU9QTgAGFz4AOngD2IAPXv8Ii3YAUwy+yctmBXA7gswgKGWvZw9hGXRAZhM/Q9mMDMAZwYBwFTq71VgegAQSDGm8NBTLSRVeNLk+teeWq8AQHvWzx4xcx6Yeu/HAa+ycQfuYGPvjSj7bgcAHnhuUioCuDWjAfHMpSBUBLABAO3+/yUmwJgFObZmAaB7gaQpSuP6nBY0CaBwNUmGsrk2awPQek7SBAoBkGf0yCGexlcRwAV8QAsAWL9C+agRAcCkk5Hb3gG4WxrCI8KOLd7wjAmAup1h/MUCQC2P3ZvA0gDi7n6ZwCOTJL53XD5g+QAi92c5QeK0WnsnWOU4zDg2MkujISdYLx6wANCefWlA4xuhejHBTk3AAaA2JamQliYg0roJFAEAOJqLCe44TEGWltX0n5rMqe8GH1dj/npcGxZTXsC0WRwD0G6G2pRINyrnn4IGaB2hrqs2S88N4JAi4/3ATGawL884SWomMzgDmEgLDhu5OFN0Bi047E6pZOmRfcFpa77S5ZnEhBFNgYw6r09mUpu0jj6V48SAUyPYPZvWl/1qrONcYlEukwgAggDfA2uTEd99EsjOOh6QGECopElofLPkKsHD2NQAiIRGeJTN7nwRDCc0tC3NPIvH8RSAuDHvNLGJ4E/otaYTOy74hN49KxWWmoQ/tlK5/qQEMNEAAAAASUVORK5CYII=",
+              name: "Xiaomi",
+              url: "http://app.xiaomi.com/detail/1638797",
+            },
+
+            {
+              color: "#FF6900",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAArNJREFUeF7tm+t2wyAIgOuTbX2yrU+27MlcsZpDDChY23nrn+0k3vgEVCTmUvFnrf30zcHfj6jp8E7a44YK/qL/N2MMfidtjyxnnqntBf5CQj/TXEndG1QyxnyXVHZ1tRWR0NoZ1XalLV8EQwygYcFjUABCbCYiANZaULGg6tqZ+a/yN4lpZAFYa3/uRFtTdylU0IRrqjALwKs8CD/C78qtHCkAdgTJgwzmbg+UPOTDztWemzfSHE4AOnV4UmU9QTgAGFz4AOngD2IAPXv8Ii3YAUwy+yctmBXA7gswgKGWvZw9hGXRAZhM/Q9mMDMAZwYBwFTq71VgegAQSDGm8NBTLSRVeNLk+teeWq8AQHvWzx4xcx6Yeu/HAa+ycQfuYGPvjSj7bgcAHnhuUioCuDWjAfHMpSBUBLABAO3+/yUmwJgFObZmAaB7gaQpSuP6nBY0CaBwNUmGsrk2awPQek7SBAoBkGf0yCGexlcRwAV8QAsAWL9C+agRAcCkk5Hb3gG4WxrCI8KOLd7wjAmAup1h/MUCQC2P3ZvA0gDi7n6ZwCOTJL53XD5g+QAi92c5QeK0WnsnWOU4zDg2MkujISdYLx6wANCefWlA4xuhejHBTk3AAaA2JamQliYg0roJFAEAOJqLCe44TEGWltX0n5rMqe8GH1dj/npcGxZTXsC0WRwD0G6G2pRINyrnn4IGaB2hrqs2S88N4JAi4/3ATGawL884SWomMzgDmEgLDhu5OFN0Bi047E6pZOmRfcFpa77S5ZnEhBFNgYw6r09mUpu0jj6V48SAUyPYPZvWl/1qrONcYlEukwgAggDfA2uTEd99EsjOOh6QGECopElofLPkKsHD2NQAiIRGeJTN7nwRDCc0tC3NPIvH8RSAuDHvNLGJ4E/otaYTOy74hN49KxWWmoQ/tlK5/qQEMNEAAAAASUVORK5CYII=",
+              name: "Xiaomi",
+              url: "http://app.xiaomi.com/detail/1638797",
+            },
+            {
+              color: "#FF0000",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABDRJREFUeF7tWl2a2yAMNCdr92TtnmzTk7krPmBl0M8IyEO+OE/bJgZpNBpJ4HS8+Se9uf/HDcDNgDdH4E6BNyfALYJPTYHzPH8fx/GnsIz+fqSUPizWnef5tzzzOI7jX3mG/n7K5ykAMMfJ6f7zkVISHSrPfQnPfNL/pZQInK2f7QCwCGqGqiwAnv3cDcJWAAAHMijp2wsJnfN7ASC8W0HYBoBBX8mnIQ1WnweAE3+yE4AqXogtQxRR9pTFXTFFjMhsRH/oKDeJnSResA6c50nPS6KpraGKacSnXQBEoi/qAJj/3LctWgABQPmplS6yKEjf6sQlghMAmGlANiEVwwWANyZaEzNBXwKhARAUwAogUk7dNEEA4KVJpN0GAMIp9K1fmi39WiYIJgCKY1IJW3JgMoWkSiKJsZkqKgCGUcOCqxSeZJAEgNZIqYJpAWB1ZRIISBfHVbytMQNA3016LNK6T60lRSjdq3i0jq8AcImo53xBXWTBSk++rOQ1KhMlsAcAYZ+oBQMAwXy+LBp1ZBYATmcw+mLvIbbCwQVpjRaNaC5PAsD3Q1KV685QwSQGRBdtqRBkTxuLg8zhDRRC/TAA0cGGNpgStAkGrET/olkVlVURHIaTCAtmAZhIU3EAU8fhaC43NMtJD/p8EAAe/Sj1wwDMpEFLBZQFMwDMRl+bHaxOMNrYXEoNwoIAADn6C86r80DSZn00isLpS94MeT4AQFb+YLVopmltcNaAgmrNkcu5O+KEcvxUI2ayCARgNfraAWy+sCEAuJHb5n1yzgMQAQD5jRIEbWolx+vZ44OMlBR19dS2dYhW3gLOzUZfcl5kowZABXVm6ho6L0UQveaJfx8peyGbPQBWgbAE0QMgGn26b6Rn8r2jcz/5c66IlKs6T2fRKBeUgZJUFbynoAVA1HneJNUbaeSOIWtAtN6HKNbNCeIBa28D0wZvMOMgRhz/Yban1IrC9mMwGfrLuNmpLOAdpjZGI9Hv6e4BpbnxkTvBCRYMQ1BZRzNEors02SHTXn+fwMuaEa/hq7xXBWC2929U4m9yKPrQs2Bw1qH+bJ6LoNS92iwQEDULZUsfOAuIKfRvrth0/ZY70c6WXXQXWXsZhjaBcNGHziH3qqp7R6gva5EbaC1QlyDtOhKTNpO6SfOSldVvKreReo7m/mCTdiJEmsDf8EI3gIBAF9vIyEsa8f29u8EKhFXiEH/EIct6cLEy1bfQ6ttl6mt27u0w4t0r/yYEQGmaLH+19rMpPgpW2UtdT1vHepFDeuYZR2L9PmH61wU2aoD6ap4FwGpzRH64Zc9jxCYQVDs8EZztsaejrgGyAIRpi6sBwY3VcuNFGvk+aMvQkIU0gP8Y3Hh71BfZANnjMsAB4qkR91ihBCZkUwgAz6BX/P4G4BWjttPmmwE70XzFtW4GvGLUdtr89gz4D2nVWRDDNAm8AAAAAElFTkSuQmCC",
+              name: "华为",
+              url: "http://app.xiaomi.com/detail/1638797",
+            },
+
+            {
+              color: '#415FFF',
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAkJJREFUeF7tV9FuwyAMhC/b+mVbv2zdl7EaQeRQg52ySLE4pL0swT6fzxc3hsVPXLz+AAKggMUZwAgsLgCYIEYAI7A4AxiBxQWArwBGACOwOAMYgcUFgK8ARgAjsDgDp41ASukzxvi4Or+nEJBS+g4hfIUQHjHG25VJOIuAxIq+xxiJkEueswhYWwHUajceQECfs0p/4ahU+V1+vxezeEMehclc5C2bwZZ85Dna+W1zx5TSTyXgqGmlZ0XSrDcxbwS2gKRc9eT/a4iLmupIVfK20W1yWcLRO5s550C9QkbRmNPvApZ4nNSt0OYOqcDkQUaircXX9zIJlQAaAXN32kJCCLtuSgqoWY8qrsm1fVEEDPfS2a6qRNzvANMUoxBgJnukmB4xmgyaUXzsJKgVJsyjuOiMCNBmmhcwwsOfWUeJNXvzrpaAYXc06XfUJJqdNgojj2l9698IEAxs12GLQkYm2HS3S7aFaE1lioHLCijgRWBHHNwKrhfTQrSmoB4BL94hvSh0gJw1L0vlDPd7KwGCWsjJPyx7ibBXEMa86HQOxaWzr2PAFP+W89fUHzcHCWgVx3MNlyWhUdpH4KWO4SIibFlq8VYPUPyAHps2xTdIyEqpq7i6iRWpZbzW1bWQQOvrbmfX2lNzHclTYzKcXOI8ZV6Q2tgqARpo789BgPcOzuKHAmYZ9H4fCvDewVn8UMAsg97vQwHeOziLHwqYZdD7fSjAewdn8UMBswx6vw8FeO/gLH4oYJZB7/ehAO8dnMX/B2u/hjcqCsD3AAAAAElFTkSuQmCC",
+              name: "Vivo",
+              url: "https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=3967619",
+            },
+            {
+              color: "#2E7D32",
+              icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAApxJREFUeF7tmgtuxCAMRMPJ2j1ZuydrejK6jkJEWAMefgmFlSpVaoLtN2N+XbUM/lGD179MANMBgxOYLTC4AeYkOFtgtsDgBGYLDG4AbBXQWn8uy0I/i1Lq+07wUnMTt4DW+scUvxf+vAsErTWJ8WUJsiqlHhKBRACYAGbsh1JqlQSq9UxubrkAxKQvACByqBQA9T21APcRBaoBIKA+hRPlJQJAozFzgF3TJa2gXwQ8YMXORACEXCAOWMoJJdTfVjMkoUjQpi4IqC+yvqkbArC3QrbtEOjcsyEh1GttRsaHHt4BhFqBdYG1Sfmwkts2VPbavf/+e6jDbLZKWT/ZAbEJkRRwCnYLRQSiZ2mfQVBonlkD1qfdKSwo/ILABWiBpZ6Hej/LATEXlKoIGCepeHgVsBPabe7bHAG5F3k0eQXKaQE6fOT2d5Hq9/lBdPhxA8IAIrNwqYJSx4FbAQJw8+INNAiCGEDkLJCqWK33xBBEADor3kAVnU+iADotXgwhCKCTno+1UbAdvAD+SfEGjnefwAJI2OSYe8FW+4KUeCwEHwDfkde1GyVCFtsSauSak6WBOYqdFN8AIEVwpy8goVjvsn/PjPk2H3AApOqzk0tlAKyKSMu6AE8AEPV9t66h83qS5M5LHgeELmncsCfhXABS9beLCve/LyDAVB5vzkPj2hAPAOgge/ZHMonvZ0NA7G8FO/K2ASDq24nTCtBq+eNWoaTYxgUbgMbqpape+r1tXzAygG0OMwBS7V9alabjURuYK+y73O01BfC6bn8QAPfLBa2TuDLec3QAKwFwv/pypSKtYx8AWge+TbzoldhtMq2UyARQCWw3w04HdCNVpUSnAyqB7WbY6YBupKqU6HRAJbDdDDsd0I1UlRL9A+xJND7MXxGMAAAAAElFTkSuQmCC",
+              name: "APK",
+              url: "https://apk.1panel.cn",
+            },
+          ],
+          logo: "/upload/1panel-logo-white.png",
+          name: "1Panel",
+          screenshots: [
+            "/upload/1panel-app-servers.png",
+            "/upload/1panel-app-monitoring.png",
+            "/upload/1panel-app-docker.png",
+            "/upload/1panel-app-apps.png",
+            "/upload/1panel-app-waf.png",
+            "/upload/1panel-app-website-monitoring.png",
+            "/upload/1panel-app-file.png",
+            "/upload/1panel-app-ssh.png",
+          ],
+        };
+        dom.setAttribute("config", JSON.stringify(config));
+      });
+    </script>
   </body>
 </html>

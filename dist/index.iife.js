@@ -126,11 +126,11 @@ Minimum version required to store current data is: `+I+`.
                   <a
                     href="${i.url}"
                     target="_blank"
-                    class="flex w-full items-center justify-center rounded-lg px-4 py-3 text-white shadow-sm transition-opacity hover:opacity-80 lg:w-auto"
+                    class="flex w-full items-center justify-center rounded-lg px-3 py-2.5 text-white shadow-sm transition-opacity hover:opacity-80 lg:w-auto"
                     style="background-color: ${i.color};"
                   >
-                    <img src="${i.icon}" class="size-4.5 mr-2" />
-                    <div class="font-semibold">${i.name}</div>
+                    <img src="${i.icon}" class="size-4 mr-2" />
+                    <div class="font-semibold text-sm">${i.name}</div>
                     <div class="ml-2">
                       <div
                         class="i-tabler-qrcode cursor-pointer text-lg hover:opacity-80"
@@ -298,7 +298,7 @@ Minimum version required to store current data is: `+I+`.
 .mt-4{margin-top:1rem;}
 .hidden{display:none;}
 .size-24{width:6rem;height:6rem;}
-.size-4\\.5{width:1.125rem;height:1.125rem;}
+.size-4{width:1rem;height:1rem;}
 .h-50{height:12.5rem;}
 .h-full{height:100%;}
 .max-w-100\\%{max-width:100%;}
@@ -327,12 +327,13 @@ Minimum version required to store current data is: `+I+`.
 .bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255 / var(--un-bg-opacity)) /* #fff */;}
 .hover\\:bg-gray-200:hover{--un-bg-opacity:1;background-color:rgb(229 231 235 / var(--un-bg-opacity)) /* #e5e7eb */;}
 .p-2{padding:0.5rem;}
+.px-3{padding-left:0.75rem;padding-right:0.75rem;}
 .px-4{padding-left:1rem;padding-right:1rem;}
 .px-5{padding-left:1.25rem;padding-right:1.25rem;}
 .px-6{padding-left:1.5rem;padding-right:1.5rem;}
 .py-16{padding-top:4rem;padding-bottom:4rem;}
 .py-2{padding-top:0.5rem;padding-bottom:0.5rem;}
-.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
+.py-2\\.5{padding-top:0.625rem;padding-bottom:0.625rem;}
 .py-8{padding-top:2rem;padding-bottom:2rem;}
 .text-center{text-align:center;}
 .text-2xl{font-size:1.5rem;line-height:2rem;}

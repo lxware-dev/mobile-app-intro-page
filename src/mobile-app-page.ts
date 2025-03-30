@@ -259,11 +259,11 @@ export class MobileAppPage extends LitElement {
                   <a
                     href="${download.url}"
                     target="_blank"
-                    class="flex w-full items-center justify-center rounded-lg px-4 py-3 text-white shadow-sm transition-opacity hover:opacity-80 lg:w-auto"
+                    class="flex w-full items-center justify-center rounded-lg px-3 py-2.5 text-white shadow-sm transition-opacity hover:opacity-80 lg:w-auto"
                     style="background-color: ${download.color};"
                   >
-                    <img src="${download.icon}" class="size-4.5 mr-2" />
-                    <div class="font-semibold">${download.name}</div>
+                    <img src="${download.icon}" class="size-4 mr-2" />
+                    <div class="font-semibold text-sm">${download.name}</div>
                     <div class="ml-2">
                       <div
                         class="i-tabler-qrcode cursor-pointer text-lg hover:opacity-80"
